@@ -1,5 +1,4 @@
 #student addmision application
-
 #input data
 studen_scook_mark       =   7.0
 university_mark         =   7.0

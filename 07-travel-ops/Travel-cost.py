@@ -30,7 +30,7 @@ if im_ready         == "yes":
     
     total_travel_duration = round(troller_duration_time + bus_path_time + metro_path_time, 1)
     total_travel_cost     = troller_cost + bus_cost + metro_cost
-    total_travel_len      = round(troller_distance + bus_distance + metro_distance, 3)
+    total_travel_len      = round(troller_distance + bus_distance + metro_distance, 1)
 
     print("let me calculate everything... :")
     print("total trip duration was ", total_travel_duration, " minutes, total distance was ", total_travel_len, "km, total trip cost was", total_travel_cost, "$" )

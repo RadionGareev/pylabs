@@ -7,7 +7,6 @@ up      = "     +\n\n+    +    +"
 all     = ("left","right","down","up")
 # ask for direction:
 deirection = input("introduce the direction(upmdown,left,right:)")
-
 #check input and print 
 if deirection in all:
     if deirection == "up":
@@ -19,5 +18,4 @@ if deirection in all:
     if deirection =="right":
         print(right)
 else:
-    print(all)
     exit("Error: invalid direction")
