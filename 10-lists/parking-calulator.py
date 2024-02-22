@@ -1,9 +1,9 @@
 from os import system
-p       = ["Mercedes", None, "BMW",None, None, "Toyota", "BMW"]
+p       = ["Mercedes", None, "BMW",None, None, "Toyota", "BMW","Mercedes"]
 total   = len(p)
 free    = 0
-car_num = 0
-car_name= []
+car_num = {}
+car_name= "1"
 system('cls')
 print("On this parking we have:")
 print("N\t Name\t Q\t  \n")
@@ -15,12 +15,12 @@ for i in range(len(p)):
 
             continue
         else:
-           car_name.append(p[i])
+ #          car_num.append(p[i])
            car_num +=1
 
            #print(p[i]) 
 #for c in range(len(car_name)):
-
+print(car_name)
 #print(c+1,"\t", car_name,)
 #print(car_name)
 print("Parking (free/total):", free, "/", total, "places.\n", "total Car models: ", car_num )

@@ -1,6 +1,6 @@
 from os import system
 
-p = ["Mercedes", None, "BMW", None, None, "Toyota", "BMW"]
+p = ["Merce", None, "BMW", None, None, "Toyota", "BMW", "Merce"]
 total = len(p)
 free = p.count(None)
 
