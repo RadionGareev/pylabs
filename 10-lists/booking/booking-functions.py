@@ -8,18 +8,18 @@ destinations = []
 prices = []
 def readDestinations():
     global destinations
-    file = open(r"D:\Python\pylabs\10-lists\dest.txt", "r")
+    file = open(r"D:\Python\pylabs\10-lists\booking\dest.txt", "r")
     lines = file.readlines()
     for line in lines:
         destinations.append(line.strip("\n"))
     file.close()
 def readDPrices():
     global prices
-    file = open(r"D:\Python\pylabs\10-lists\prices.txt", "r")
+    file = open(r"D:\Python\pylabs\10-lists\booking\prices.txt", "r")
     lines = file.readlines()
     for line in lines:
-        #price = line
-        prices.append(line.strip("\n"))
+        price = float(line.strip("\n"))
+        prices.append(price)
         #print(prices)
         #input("wait here")
     file.close()
