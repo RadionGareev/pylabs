@@ -63,6 +63,7 @@ while True:
             c = '     '
             t = '     '
             s = ' '
+           #########Draw  the lift
             if floor == lift_floor +1:
                 if lift_dir == dir_down:
                     a = '  v  '
