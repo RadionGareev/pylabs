@@ -64,5 +64,6 @@ while option!='x':
         else:
             gmap[robo_r][robo_c] = 'x' 
 
+
                
 
