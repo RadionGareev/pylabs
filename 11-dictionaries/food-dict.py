@@ -26,8 +26,8 @@ else:
 delivery_want = input("\n Do you want delivery? y/n \n>>>")=='y'
 if  delivery_want and order['total']>300:
     print(f"you got {order['delivery']} delivery. \n\n\n Total  sum  is: {order['total']} \n Enjoy!")
-if delivery_want and order['total']<300:
+elif delivery_want and order['total']<300:
     order['total'] = order['total']+order['delivery']
     print(f"You should pay {order['delivery']} $ for delivery. \n\n Total  sum  is: {order['total']} ")
-#else:
-#    print(' Got it,  no delivery. Come and take your command')
+else:
+    print(' Got it,  no delivery. Come and take your command')
