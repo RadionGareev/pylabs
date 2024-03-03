@@ -16,8 +16,13 @@ while lib.running:
         lib.renderDestinations()
     if lib.option==3:
         lib.renderPrices()
+    if lib.option==4:
+        lib.renderOrder()
+    if lib.option==5:
+        lib.removeOrder()
     if lib.option==0:
         lib.running=False
         print("Bye!")
     else:
         print("would you like to try one more time?")
+

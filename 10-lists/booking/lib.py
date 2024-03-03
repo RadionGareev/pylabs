@@ -1,4 +1,7 @@
 from os import system
+from os.path import exists
+from os import remove
+
 quantity =0
 option = 0 
 running = True
@@ -30,7 +33,8 @@ def renderMenu():
     print ("1. Search destination")
     print ("2. Show destinations")
     print ("3. Show price")
-    print ("4. Manage")
+    print ("4. Check order")
+    print ("5. Delete order")
     print ("0. Exit")
     try:
         option = int(input("choose >>> "))
@@ -63,17 +67,54 @@ def searchDestination():
         # ask for confiramtion
         try: 
             quantity = int(input("how many tickets would you like to buy?\n>>> "))
-            summ = quantity*prices[i]
-            agree = input(f"The total price would be: {summ} $.\nDo you agree  to by it? (y/n)\n>>> ") == "y"
-            if agree:
-                print("\nThank you!\n")
-            else:
-                print("\nTry again\n")
         except:
             print("only digits")
+        summ = quantity*prices[i]
+        agree = input(f"The total price would be: {summ} $.\nDo you agree  to by it? (y/n)\n>>> ") == "y"
+        #HW4 create  and save order
+        if agree:
+            print("\nThank you!\n")
+            pnc = input("write your persona code: \n>>> ")
+            path = r"D:\Python\pylabs\10-lists\booking\tickets\\"
+            file = open(f"{path}{pnc}.txt", "w")
+            file.write(f"{destination} \n")
+            file.write(f"{quantity} \n")
+            file.write(f"{summ}")
+            file.close()
+            print('oreder saved!')
+        else:
+            print("\nTry again\n")
 
         
 
     else:
         print(f"destination'{destination}' is UNavailable")
     input("hit enter to continue...")
+
+#HW5 read the order - menu button 4
+def renderOrder():
+    id = input("what is your ID? \n >>> ")
+    path = r"D:\Python\pylabs\10-lists\booking\tickets\\"
+    if exists(f"{path}{id}.txt"):
+        file = open(f"{path}{id}.txt", "r")
+        lines = file.readlines()
+        print("Your order details:")
+        for line in lines:
+            print('\t', line.strip('\n'))
+        file.close()
+    else:
+        print("your order does not exists.\n")
+    input("hit enter to continue...")
+
+# HW6 - remove Order
+
+def removeOrder():
+    id = input("what is your order ID? \n >>> ")
+    path = r"D:\Python\pylabs\10-lists\booking\tickets\\"
+    if exists(f"{path}{id}.txt"):
+        remove(f"{path}{id}.txt")
+        print("Your order deleted!")
+       
+    else:
+        print("your order does not exists.\n")
+    input("\nHit enter to continue...")
