@@ -5,7 +5,7 @@ from os import system
 system('cls')
 commonlist = guests_1+guests_2+guests_3
 guests = []
-print('Common list:\n')
+print('Common lists:\n')
 for guest in range(len(commonlist)):
     print(guest+1, '.', commonlist[guest])
       
@@ -14,7 +14,7 @@ for guest in range(len(commonlist)):
         guests.append(commonlist[guest])
 #bonus HW:
 sorted_guests = sorted(guests)
-print('\n\nNot repeated list:\n')
+print('\n\nNot repeated and sorted list:\n')
 for guest in range(len(sorted_guests)):
     print(guest+1, '.', sorted_guests[guest])
 print()
