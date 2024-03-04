@@ -12,8 +12,10 @@ for guest in range(len(commonlist)):
 for guest in range(len(commonlist)):
     if commonlist[guest] not in guests:
         guests.append(commonlist[guest])
+#bonus HW:
+sorted_guests = sorted(guests)
 print('\n\nNot repeated list:\n')
-for guest in range(len(guests)):
-    print(guest+1, '.', guests[guest])
+for guest in range(len(sorted_guests)):
+    print(guest+1, '.', sorted_guests[guest])
 print()
 
