@@ -18,4 +18,3 @@ print('\n\nNot repeated and sorted list:\n')
 for guest in range(len(sorted_guests)):
     print(guest+1, '.', sorted_guests[guest])
 print()
-
